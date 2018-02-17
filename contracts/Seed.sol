@@ -31,4 +31,10 @@ contract Seed is ERC721Token, Ownable {
         require(roles[msg.sender] == Licensed.Authority);
         _;    
     }
+
+    function mint(address _to, uint256 _tokenId) public {
+        super._mint(_to, _tokenId);
+    }
+
+
 }
